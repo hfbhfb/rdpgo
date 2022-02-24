@@ -13,6 +13,15 @@ services:
       - rdp
       - vnc
 
+  # 提供guac 协议
+  guacd:
+    container_name: guacd.mojotv.cn
+    image: guacamole/guacd
+    ports:
+      - 4822:4822
+    restart: always
+
+
   vnc:
     # vnc 图形界面Ubuntu虚拟机容器 password: vncpassword  容器 vnc端口5901
     image: consol/ubuntu-xfce-vnc:1.4.0
