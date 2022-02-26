@@ -33,6 +33,7 @@ services:
     ports:
       - 15082:5901
       - 15083:6901
+    restart: always
 
 
   rdp: #rdp 图形界面Ubuntu虚拟机容器  远程桌面支持rdp协议  容器rdp端口 3389
@@ -45,6 +46,7 @@ services:
       - guacd
     ports:
       - 15084:3389
+    restart: always
 
 networks:
   mojo:
