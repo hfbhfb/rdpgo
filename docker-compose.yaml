@@ -12,6 +12,7 @@ services:
     depends_on:
       - rdp
       - vnc
+    restart: always
 
   # 提供guac 协议
   guacd:
